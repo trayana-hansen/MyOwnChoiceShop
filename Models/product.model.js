@@ -3,6 +3,7 @@ import { DataTypes, Model } from 'sequelize'
 
 class ProductModel extends Model{}
 
+
 ProductModel.init({
 	id: {
 		type: DataTypes.INTEGER,

@@ -3,7 +3,7 @@ import { DataTypes, Model } from 'sequelize'
 
 class SizeModel extends Model{}
 
-GenderModel.init({
+SizeModel.init({
 	id: {
 		type: DataTypes.INTEGER,
 		autoIncrement: true,
@@ -11,7 +11,7 @@ GenderModel.init({
 		primaryKey: true
 	},
 	size: {
-		type: DataTypes.INTEGER,
+		type: DataTypes.STRING,
 		allowNull: false,
 	}
 }, {
