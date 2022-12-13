@@ -7,6 +7,7 @@ import GenderRouter from './Router/gender.router.js'
 import SizeRouter from './Router/size.router.js'
 import TypeRouter from './Router/type.router.js'
 import BrandRouter from './Router/brand.router.js'
+import UserRouter from './Router/user.router.js'
 
 const app = express();
 app.use(express.urlencoded({ extended: true}))
@@ -29,6 +30,7 @@ app.use(GenderRouter)
 app.use(SizeRouter)
 app.use(TypeRouter)
 app.use(BrandRouter)
+app.use(UserRouter)
 
 app.listen(4500, () => {
 	console.log(`The server is running on localhost:${port}`);
