@@ -7,7 +7,7 @@ class UserController {
 		console.log(req.query);
 		let { limit, attributes } = req.query
 		limit = parseInt(limit) || 1000
-		const attr = attributes ? attributes.split(',') : new Array('id', 'username', 'password', 'firstname', 'lastname','email', 'address', 'zipcode', 'city', 'phone_number' )
+		const attr = attributes ? attributes.split(',') : new Array('id', 'username', 'password' )
 		console.log(attr);
 
 
