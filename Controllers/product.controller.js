@@ -10,7 +10,7 @@ class ProductController {
 		console.log(req.query);
 		let { limit, attributes } = req.query
 		limit = parseInt(limit) || 1000
-		const attr = attributes ? attributes.split(',') : new Array('img', 'name', 'description' )
+		const attr = attributes ? attributes.split(',') : new Array( 'id', 'img', 'name', 'description' )
 		console.log(attr);
 
 
@@ -23,7 +23,7 @@ class ProductController {
 
 	details = async (req, res) => {
 		const { id } = req.params || 0
-		const result = await UserModel.findOne({
+		const result = await ProductModel.findOne({
 			attributes: ['id', 'item_number', 'img', 'name', 'description', 'stock','size', 'price', 'gender_id', 'brand_id', 'type_id' ],
 			where: { id: id }
 		})
