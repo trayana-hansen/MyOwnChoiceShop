@@ -9,6 +9,7 @@ import BrandRouter from './Router/brand.router.js'
 import UserRouter from './Router/user.router.js'
 import ReviewRouter from './Router/review.router.js'
 import ProductRouter from './Router/product.router.js'
+import { router as AuthRouter } from './Router/authenticate.router.js'
 
 const app = express();
 app.use(express.urlencoded({ extended: true}))
@@ -33,6 +34,8 @@ app.use(BrandRouter)
 app.use(UserRouter)
 app.use(ReviewRouter)
 app.use(ProductRouter)
+app.use(AuthRouter)
+
 
 app.listen(4500, () => {
 	console.log(`The server is running on localhost:${port}`);
