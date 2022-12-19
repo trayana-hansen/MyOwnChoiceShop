@@ -1,3 +1,7 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
 <h1>Login</h1>
 <form action="/login" method="POST">
     <label for="email">Email</label>
@@ -10,3 +14,23 @@
   <button type="submit">Login</button>
 </form>
 <a href="/register">Register</a>
+
+<script>
+  const handleAuthentication = (email, password) => {
+       $.post("http://localhost:4500/signin",
+      {
+       username: email,
+       password: password
+      },
+      function(data,status){
+        alert("Data: " + data + "\nStatus: " + status);
+      });
+  }
+  $(document).ready(()=>{
+       $("#login").click(()=>{
+       let email= $("#email").val()
+       let password= $("#password").val()
+     handleAuthentication(email, password)
+  })
+  })
+  </script>

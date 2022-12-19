@@ -5,7 +5,7 @@ const router = express.Router()
 
 const controller = new AuthenticateController();
 
-router.post('/login', (req, res) => {
+router.post('/signin', (req, res) => {
 	controller.login(req, res)
 })
 router.get('/protected', verifyToken, (req, res) => {

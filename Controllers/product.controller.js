@@ -18,6 +18,10 @@ class ProductController {
 			attributes: attr,
 			limit: limit
 		})
+		result.forEach(element =>{
+			let img = new Buffer.from(element.img).toString('utf8')
+			element.img=img
+		   })
 		res.json(result)
 	}
 
