@@ -2,6 +2,7 @@ import UserModel from '../Models/user.model.js'
 import dotenv from 'dotenv'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import ejs from 'ejs'
 dotenv.config()
 
 class AuthenticateController {
@@ -18,8 +19,9 @@ class AuthenticateController {
 					//Generate jsonwebtoken
 					const token = jwt.sign(userdata.id, process.env.PRIVATE_KEY)
 					res.json({access_token: token})
-				} else {
 
+				} else {
+					console.log(result);
 					res.sendStatus(401)
 
 				}

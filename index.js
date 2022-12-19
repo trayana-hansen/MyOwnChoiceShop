@@ -45,7 +45,7 @@ app.get('/register', (req, res) => {
 	res.render('register.ejs')
 })
 app.post('/register', (req, res) => {
-
+	req.body.email
 })
 
 //Use routers, it cannot be used before it is called

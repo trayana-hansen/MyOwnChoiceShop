@@ -30,7 +30,8 @@ class UserController {
 		const {username, password, firstname, lastname, email, address, zipcode, city, phone_number }  = req.body;
 		if(username && password && firstname && lastname &&email && address && zipcode && city && phone_number) {
 		const model = await UserModel.create(req.body)
-		res.json({ newId: model.id })
+		res.send('Registration successful')
+		res.end()
 			} else {
 				res.sendStatus(418)
 			}
