@@ -33,5 +33,8 @@ for (let index = 0; index < apiData.length; index++) {
 
 })
 }
+/**
+ * TODO set up a modal to display description and rating when clicked, scale image 2x
+ */
 
 fetchAPI()

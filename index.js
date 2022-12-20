@@ -25,7 +25,7 @@ dotenv.config();
 
 const port = process.env.PORT || 4500
 
-//const api_key = process.env.APIKEY;
+
 
 
 app.set('view-engine', 'ejs')
