@@ -10,7 +10,7 @@ class ProductController {
 		console.log(req.query);
 		let { limit, attributes } = req.query
 		limit = parseInt(limit) || 1000
-		const attr = attributes ? attributes.split(',') : new Array( 'id', 'img', 'name', 'description' )
+		const attr = attributes ? attributes.split(',') : new Array( 'id', 'img', 'name', 'description', 'stock','size', 'price', 'gender_id', 'brand_id', 'type_id' )
 		console.log(attr);
 
 

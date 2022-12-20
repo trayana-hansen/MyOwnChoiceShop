@@ -1,0 +1,12 @@
+@import "colors";
+@import "fonts";
+@import "home";
+@import "nav";
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $black;
+  font-family: "Roboto", sans-serif;
+}

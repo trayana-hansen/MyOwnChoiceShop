@@ -1,29 +1,44 @@
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="./assets/js/home.js" defer></script>
+    <script src="./assets/js/nav.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="navbar">
+        <div class="logo-container">
 
-<div id="products-container">
-  <script>
-    function toBase64(arr) {
-      //arr = new Uint8Array(arr) if it's an ArrayBuffer
-      return btoa(
-        arr.reduce((data, byte) => data + String.fromCharCode(byte), "")
-      );
-    }
-    $.get("/product", function (data, status) {
-      data.forEach((element) => {
-        $("#products-container").append(`
-   <div class="product">
-	<section class="cards">
-	<img src="${element.img}" alt="${element.name} image" border="0" />
-		<p>${element.name}</p>
-		<p>${element.description}</p>
-
-</section>
-</div>
-
-   `);
-      });
-    });
-  </script>
-</div>
+            <img
+              src="./assets/images/Universe of scents.svg"
+              alt="LOGO"
+              height="150px"
+              width="150px"
+          /></a>
+          <h1>Universe of scents</h1>
+        </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="products" class="productWrapper"></section>
+    </main>
+  </body>
+</html>
