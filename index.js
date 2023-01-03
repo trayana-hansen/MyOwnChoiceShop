@@ -47,6 +47,10 @@ app.get('/register', (req, res) => {
 app.post('/register', (req, res) => {
 	req.body.email
 })
+app.get('/about', (req, res) => {
+	res.render('about.ejs')
+})
+
 
 //Use routers, it cannot be used before it is called
 app.use(InitRouter)

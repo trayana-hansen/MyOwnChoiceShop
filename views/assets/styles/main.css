@@ -125,4 +125,13 @@ h1 {
 body {
   background-color: #0a0b0a;
   font-family: "Roboto", sans-serif;
+}
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body label,
+body a {
+  color: #c8a2c8;
 }/*# sourceMappingURL=main.css.map */
